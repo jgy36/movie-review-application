@@ -7,11 +7,12 @@ import java.util.List;
 
 @Service
 public class MovieService {
-    @Autowired
-    private MovieRepository movieRepository;
 
-    public List<Movie> allMovies() {
-        return movieRepository.findAll();
+    @Autowired
+    private MovieRepository movieRepository; // inject repository
+
+    public List<Movie> allMovies() { // method will return a list of (class) Movie
+        return movieRepository.findAll(); // call findAll method from repository
     }
 }
 
